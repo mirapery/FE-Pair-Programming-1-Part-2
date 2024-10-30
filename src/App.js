@@ -1,4 +1,4 @@
-import './App.css';
+import './CreditCard/CreditCard.css';
 import CreditCard from './CreditCard/CreditCard';
 
 function App() {

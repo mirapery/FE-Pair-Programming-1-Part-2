@@ -1,0 +1,13 @@
+
+.card {
+    padding: 20px;
+    margin: 10px;
+    max-width: 250px;
+    display: inline-block;
+
+}
+
+.card .card-logo {
+    max-width: 18%;
+    height: auto;
+}

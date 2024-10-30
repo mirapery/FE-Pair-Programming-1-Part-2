@@ -3,25 +3,17 @@ import imgVisa from '../images/visa.png';
 import imgMaster from '../images/master.png';
 
 function CreditCard(props) {
-    //const number = props.number;
-    //const last4Digits = number.slice(-4);
-    const boxColor = {backgroundColor: props.bgColor};
-    const textColor = {color: props.color};
-    const combinedStyles = {...boxColor, ...textColor};
+    const boxColor = { backgroundColor: props.bgColor };
+    const textColor = { color: props.color };
+    const combinedStyles = { ...boxColor, ...textColor };
 
     return (
-        <div>
-            <CreditCard style={combinedStyles}>
-                <img src={props.type === "Visa" ? imgVisa : imgMaster} alt="logo" />
-                <p>{props.number}</p>
-                <ul>
-                    <li>{props.expirationMonth}</li>
-                    <li>{props.expirationYear}</li>
-                    <li>{props.bank}</li>
-                    <li>{props.owner}</li>
-                </ul>
-                <p></p>
-            </CreditCard>
+        <div className="card" style={combinedStyles}>
+            <img className="card-logo" src={props.type === "Visa" ? imgVisa : imgMaster} alt="logo" />
+            <p className="number" >**** **** **** {props.number.slice(-4)}</p>
+            <p>Expires {String(props.expirationMonth).padStart(2, '0')}/{String(props.expirationYear).slice(-2)}</p>
+            <p>{props.bank}</p>
+            <p>{props.owner}</p>
         </div>
     );
 }
