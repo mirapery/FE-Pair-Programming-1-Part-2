@@ -1,5 +1,7 @@
 import './CreditCard/CreditCard.css';
+import './BoxColor/BoxColor.css';
 import CreditCard from './CreditCard/CreditCard';
+import BoxColor from './BoxColor/BoxColor';
 
 function App() {
   return (
@@ -36,6 +38,9 @@ function App() {
         bgColor="#ddbb55"
         color="white"
       />
+
+      <BoxColor r={255} g={0} b={0} />
+      <BoxColor r={128} g={255} b={0} />
     </>
   );
 }
