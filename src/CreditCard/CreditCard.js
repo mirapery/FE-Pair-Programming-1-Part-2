@@ -11,8 +11,7 @@ function CreditCard(props) {
         <div className="card" style={combinedStyles}>
             <img className="card-logo" src={props.type === "Visa" ? imgVisa : imgMaster} alt="logo" />
             <p className="number" >**** **** **** {props.number.slice(-4)}</p>
-            <p>Expires {String(props.expirationMonth).padStart(2, '0')}/{String(props.expirationYear).slice(-2)}</p>
-            <p>{props.bank}</p>
+            <p>Expires {String(props.expirationMonth).padStart(2, '0')}/{String(props.expirationYear).slice(-2)} {props.bank}</p>
             <p>{props.owner}</p>
         </div>
     );
